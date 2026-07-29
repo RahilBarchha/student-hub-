@@ -1,33 +1,176 @@
 
-site map
-                        STUDENT HUB PORTAL
-                               │
-                               │
-                     ┌───────── Home (index.html) ─────────┐
-                     │                                     │
-     ┌───────────────┼───────────────┬───────────────┬─────┼───────────────┐
-     │               │               │               │     │               │
- Login           Register        Dashboard       Profile  Events       About Us
-(login.html) (register.html) (Dashboard.html) (profile.html) (Event.html) (About.html)
-     │               │               │
-     │               │               ├──────── View Attendance
-     │               │               ├──────── View Timetable
-     │               │               ├──────── View Announcements
-     │               │               └──────── Student Information
-     │               │
-     │               └──────── New Student Registration
-     │
-     ├──────── Forgot Password (Optional)
-     └──────── Authentication
+SITEMAP:
+THIS IS THE SCRIPT MAP OF THE STUDENT HUB PORTAL I WANT TO MAKE:
+IT IS NOT PERFRECT WEBSITE BUT I THINK THIS MANY FEATURES ARE ENOUGH FOR A STUDENT FOR A GOOD EXPERIENCE.
+------LOGIN PAGE-------->LOGIN OR SIGN UP-------->HOME PAGE------>1)ATTENDANCE,2)HALL TICKET,3)LEAVE APPLICATION,4)PAPER ASSSESMENT
+                                                                        |            |                  |                 |
+                                                                                    --->HALL TICKET     --->LEAVESS        --->KNOW YOUR ANSWERSHEET
+                                                                        ->%ATTENDANCE
+------>FEES---->TIMETABLE--->RESULT---->CONTACT    
 
-                     ┌────────────────────────────┐
-                     │                            │
-               FAQ (FAQ.html)             Feedback (feedback.html)
-                     │                            │
-              Common Questions          Submit Feedback
 
-                     │
-                     │
-              Contact Us (contact.html)
-                     │
-          Email • Phone • Address • Contact Form
+WIREFRAME:
+1.
++------------------------------------------------------+
+|                 STUDENT HUB PORTAL                   |
++------------------------------------------------------+
+
+          Welcome to the Student Hub Portal!
+
+  This website provides a centralized platform for
+  students to access various resources and services.
+
+                 [ Login Button ]
+2.
++------------------------------------------------------+
+|               STUDENT HUB PORTAL                     |
++------------------------------------------------------+
+
+                    Login
+
+Username
++---------------------------+
+
+Password
++---------------------------+
+
++---------------------------+
+|          LOGIN            |
++---------------------------+
+3.
++------------------------------------------------------+
+|               STUDENT HUB PORTAL                     |
++------------------------------------------------------+
+
+      Welcome to the Student Hub Dashboard
+
++-----------------------------+
+| Profile                     |
++-----------------------------+
+
++-----------------------------+
+| Attendance                  |
++-----------------------------+
+
++-----------------------------+
+| Assignments                 |
++-----------------------------+
+
++-----------------------------+
+| Courses                     |
++-----------------------------+
+
++-----------------------------+
+| Results                     |
++-----------------------------+
+
++-----------------------------+
+| Register                    |
++-----------------------------+
+
++-----------------------------+
+| Contact                     |
++-----------------------------+
+4.
++------------------------------------------------------+
+|                STUDENT PROFILE                       |
++------------------------------------------------------+
+
+               [ Profile Photo ]
+
+Name        : ____________
+
+Roll No     : ____________
+
+Email       : ____________
+
+Phone       : ____________
+
+Address
+______________________________________
+
+______________________________________
+5.
++------------------------------------------------------+
+|              STUDENT HUB PORTAL                      |
++------------------------------------------------------+
+
+                 Attendance
+
+Overall Attendance : 80%
+
+--------------------------------------------------------
+| Subject | Lectures Attended | Attendance Percentage  |
+--------------------------------------------------------
+| MSUD    |      12/15        |        80%            |
+--------------------------------------------------------
+| CEUC    |      10/15        |      66.67%           |
+--------------------------------------------------------
+| DSA     |      14/15        |      93.33%           |
+--------------------------------------------------------
+| WDF     |      13/15        |      86.67%           |
+--------------------------------------------------------
+| HSUV    |      11/15        |      73.33%           |
+--------------------------------------------------------
+6.
++------------------------------------------------------+
+|             STUDENT HUB PORTAL                       |
++------------------------------------------------------+
+
+                 Register
+
+Event Name
+
++------------------------------+
+
+Event Date
+
++------------------------------+
+
+Certificate
+
++------------------------------+
+
++------------------------------+
+|          REGISTER            |
++------------------------------+
+7.
++------------------------------------------------------+
+|             STUDENT HUB PORTAL                       |
++------------------------------------------------------+
+
+                  Result
+
+Institute
+
+[ Select Institute ▼ ]
+
+Degree
+
+[ Select Degree ▼ ]
+
+Semester
+
+[ Select Semester ▼ ]
+
+Student ID
+
++----------------------+
+
++------------------------------+
+|        VIEW RESULT           |
++------------------------------+
+8.
++------------------------------------------------------+
+|             STUDENT HUB PORTAL                       |
++------------------------------------------------------+
+
+                Contact Us
+
+Questions or Feedback
+
+Email
+_________________________
+
+Phone
+_________________________
