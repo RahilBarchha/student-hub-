@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Explorer  | Student Hub Portal</title>
+   
+    <link rel="stylesheet" href="../practical 3/style.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+    <header>
+        <div class="header">
+            <h1>Student Hub Portal</h1>
+            <p>Learning • Innovation • Success</p>
+        </div>
+    </header>
+
+    
+    <div class="topbar">
+        <button id="menuButton" class="menu-button" type="button"
+                aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+            ☰
+        </button>
+        <div class="site-mini-title">Student Hub Portal</div>
+        <label class="theme-switch" title="Toggle light/dark theme">
+            <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+            <span>Dark Mode</span>
+        </label>
+    </div>
+
+  
+    <nav id="navMenu" class="navbar" aria-label="Main navigation">
+        <a href="../practical 2/index.html" class="nav-btn">Home</a>
+        <a href="../practical 2/login.html" class="nav-btn">Login</a>
+        <a href="../practical 2/Dashboard.html" class="nav-btn">Dashboard</a>
+        <a href="../practical 2/FAQ.html" class="nav-btn">FAQ</a>
+        <a href="../practical 2/profile.html" class="nav-btn">Profile</a>
+        <a href="../practical 2/register.html" class="nav-btn">Register</a>
+        <a href="../practical 2/feedback.html" class="nav-btn">Feedback</a>
+        <a href="../practical 2/contact.html" class="nav-btn">Contact</a>
+        <a href="../practical 2/Event.html" class="nav-btn">Events</a>
+        <a href="../practical 2/About.html" class="nav-btn">About</a>
+        <a href="index.html" class="nav-btn active">Data Hub </a>
+    </nav>
+
+    
+    <div id="notification" class="notification" role="status" aria-live="polite">
+        <span> <b></b> Consuming external JSON data with Fetch API, live search, multi-filters, sorting, pagination, and offline caching.</span>
+        <button id="dismissNotification" type="button" aria-label="Dismiss notification">×</button>
+    </div>
+
+  
+    <main class="container">
+
+        
+        <div class="header-ribbon">
+            <div class="header-info">
+                <h2> JSON Data Explorer</h2>
+                <p>Dynamic data rendering with asynchronous Fetch API, offline storage, and reactive array processing.</p>
+            </div>
+            <div class="status-box">
+                <span id="networkStatusBadge" class="status-badge online" title="Current network connectivity">
+                    <span class="pulse-dot"></span> Live API
+                </span>
+                <span id="cacheStatusBadge" class="status-badge cached" title="HTML5 LocalStorage snapshot">
+                     Saved to LocalStorage
+                </span>
+                <button id="syncCacheBtn" class="btn-sync" type="button" title="Refetch fresh JSON and update local cache">
+                     Sync / Refresh
+                </button>
+            </div>
+        </div>
+
+       
+        <div class="tabs" role="tablist" aria-label="Dataset navigation">
+            <button class="tab-btn active" data-tab="events" type="button" role="tab">
+                 Events Explorer <span id="eventsCountBadge" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn" data-tab="students" type="button" role="tab">
+                 Student Profiles <span id="studentsCountBadge" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn" data-tab="faqs" type="button" role="tab">
+                 FAQs &amp; Notices <span id="faqsCountBadge" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn" data-tab="locations" type="button" role="tab">
+                🌍 Location Directory (Dependent Dropdowns)
+            </button>
+        </div>
+
+        
+        <section id="Toolbar" class="toolbar" aria-label="Search and filter controls">
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input"
+                       placeholder="Search by title, name, venue, skills, keywords..."
+                       aria-label="Search current dataset">
+                <button id="clearSearchBtn" class="clear-search-btn" type="button" title="Clear search">×</button>
+            </div>
+
+           
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="ALL">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter" class="filter-select">
+                        <option value="ALL">All Statuses</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortBySelect">Sort By:</label>
+                    <select id="sortBySelect" class="filter-select">
+                        <option value="default">Default Order</option>
+                    </select>
+                </div>
+
+                <div style="display:flex; gap:6px; align-items:center;">
+                    <button id="sortOrderBtn" class="btn" type="button" style="padding:9px 12px; font-size:12px;" title="Toggle sort order">
+                        ▲ Asc
+                    </button>
+                </div>
+
+                <div class="filter-group" style="flex:0 1 130px;">
+                    <label for="pageSizeSelect">Show:</label>
+                    <select id="pageSizeSelect" class="filter-select">
+                        <option value="6" selected>6 / page</option>
+                        <option value="9">9 / page</option>
+                        <option value="12">12 / page</option>
+                        <option value="ALL">All items</option>
+                    </select>
+                </div>
+
+                <button id="resetFiltersBtn" class="reset-filters-btn" type="button" title="Reset all search queries and filters">
+                    Reset Filters
+                </button>
+            </div>
+        </section>
+
+       
+        <section id="locationDropdownSection" class="dropdowns-card" style="display:none;" aria-label="Hierarchical Dependent Dropdowns">
+            <h3 style="margin-bottom:8px; color:var(--primary); font-size:18px;">
+                🌍 Hierarchical Geographic Explorer (Country &rsaquo; State &rsaquo; City)
+            </h3>
+            <p style="color:var(--muted); font-size:13.5px; margin-bottom:18px;">
+                Demonstrates dependent cascading selects populated dynamically from hierarchical JSON data without page reloads.
+            </p>
+
+            <div class="dropdowns-grid">
+                <div class="dropdown-field">
+                    <label for="countrySelect">1. Select Country:</label>
+                    <select id="countrySelect" class="filter-select">
+                        <option value="">-- Select Country --</option>
+                    </select>
+                </div>
+
+                <div class="dropdown-field">
+                    <label for="stateSelect">2. Select State / Province:</label>
+                    <select id="stateSelect" class="filter-select" disabled>
+                        <option value="">-- Select Country First --</option>
+                    </select>
+                </div>
+
+                <div class="dropdown-field">
+                    <label for="citySelect">3. Select City:</label>
+                    <select id="citySelect" class="filter-select" disabled>
+                        <option value="">-- Select State First --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="geo-result-panel">
+                <div id="locationResults">
+                    <div class="geo-selection-text">
+                        Currently Selected: <i>None</i>
+                    </div>
+                </div>
+                <button id="filterStudentsByLocationBtn" class="btn" type="button" style="padding:8px 16px; font-size:13px;">
+                    Filter Student Profiles by this Location ➔
+                </button>
+            </div>
+        </section>
+
+       
+        <div class="metrics-bar">
+            <div id="metricsCount" class="metrics-count">Loading records...</div>
+            <div style="font-size:12px; color:var(--muted);">
+                Data Source: <code style="background:var(--input); padding:2px 6px; border-radius:4px;">Fetch API + JSON</code>
+            </div>
+        </div>
+
+        
+        <div id="dataContentArea" aria-live="polite">
+           
+        </div>
+
+       
+        <nav id="paginationArea" class="p6-pagination" aria-label="Data pagination">
+            <!-- Pagination buttons will be rendered here -->
+        </nav>
+
+        <!-- Quick Access Back to Portal -->
+        <div style="margin-top: 35px; padding-top: 20px; border-top: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <span style="font-size: 13px; color: var(--muted);">Jump to other portal modules:</span>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a href="../practical 2/Event.html" class="btn" style="padding: 6px 12px; font-size: 12px;">Event Registration</a>
+                <a href="../practical 2/Dashboard.html" class="btn" style="padding: 6px 12px; font-size: 12px;">Student Dashboard</a>
+                <a href="../practical 2/profile.html" class="btn" style="padding: 6px 12px; font-size: 12px;">Student Profile</a>
+                <a href="../practical 2/FAQ.html" class="btn" style="padding: 6px 12px; font-size: 12px;">Standard FAQ</a>
+            </div>
+        </div>
+
+    </main>
+
+  
+    <footer>
+        <div class="footer">
+            <p>&copy; 2026 Student Hub Portal | All Rights Reserved.</p>
+            <p> Asynchronous JSON Fetching &amp; Dynamic UI Rendering</p>
+        </div>
+    </footer>
+
+    
+    <script src="app.js"></script>
+</body>
+
+</html>

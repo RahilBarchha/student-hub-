@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub Portal - Master Hub</title>
+    <link rel="stylesheet" href="practical 3/style.css">
+    <style>
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        .portal-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .portal-card-badge {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(74, 144, 226, 0.15);
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .portal-card h3 {
+            font-size: 19px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        body.dark-theme .portal-card h3 {
+            color: var(--primary);
+        }
+
+        .portal-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        .portal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 7px 13px;
+            font-size: 12.5px;
+        }
+
+        .hero-banner {
+            text-align: center;
+            padding: 20px 10px 10px 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-banner h2 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .hero-banner p {
+            font-size: 15px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Portal Header -->
+    <header>
+        <div class="header">
+            <h1>Student Hub Portal</h1>
+            <p>Learning • Innovation • Success</p>
+        </div>
+    </header>
+
+    <!-- Topbar with Theme Switcher & Menu Button -->
+    <div class="topbar">
+        <button id="menuButton" class="menu-button" type="button"
+                aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+            ☰
+        </button>
+        <div class="site-mini-title">Student Hub Portal</div>
+        <label class="theme-switch" title="Toggle light/dark theme">
+            <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+            <span>Dark Mode</span>
+        </label>
+    </div>
+
+    <!-- Navigation Menu connecting all pages -->
+    <nav id="navMenu" class="navbar" aria-label="Main navigation">
+        <a href="practical 2/index.html" class="nav-btn">Home</a>
+        <a href="practical 2/login.html" class="nav-btn">Login</a>
+        <a href="practical 2/Dashboard.html" class="nav-btn">Dashboard</a>
+        <a href="practical 2/FAQ.html" class="nav-btn">FAQ</a>
+        <a href="practical 2/profile.html" class="nav-btn">Profile</a>
+        <a href="practical 2/register.html" class="nav-btn">Register</a>
+        <a href="practical 2/feedback.html" class="nav-btn">Feedback</a>
+        <a href="practical 2/contact.html" class="nav-btn">Contact</a>
+        <a href="practical 2/Event.html" class="nav-btn">Events</a>
+        <a href="practical 2/About.html" class="nav-btn">About</a>
+        <a href="practical 6/index.html" class="nav-btn active">Data Hub </a>
+    </nav>
+
+    <!-- Notification Banner -->
+    <div id="notification" class="notification" role="status" aria-live="polite">
+        <span>⚡ <b>Student Hub Portal Ready:</b> Explore all modules, interactive pages, and the new Practical 6 Data Hub.</span>
+        <button id="dismissNotification" type="button" aria-label="Dismiss notification">×</button>
+    </div>
+
+    <main class="container" style="max-width: 1100px;">
+
+        <div class="hero-banner">
+            <h2>Welcome to Student Hub Portal</h2>
+            <p>Your unified academic workspace for event registration, student profiles, dynamic JSON data exploration, and campus support.</p>
+        </div>
+
+        <div class="portal-grid">
+            <!-- Practical 6: Data Hub Highlight Card -->
+            <div class="portal-card" style="border: 2px solid var(--accent);">
+                <div>
+                    <span class="portal-card-badge" style="background:var(--accent); color:white;">⭐ Practical 6 Feature</span>
+                    <h3>JSON Data Hub &amp; Fetch API</h3>
+                    <p>Dynamic frontend rendering of external JSON data with real-time search, multi-criteria filtering, sorting, pagination, dependent dropdowns (Country/State/City), and offline LocalStorage caching.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 6/index.html" class="btn btn-small" style="width:100%; text-align:center;">Launch Practical 6 Data Hub ➔</a>
+                </div>
+            </div>
+
+            <!-- Student Dashboard Card -->
+            <div class="portal-card">
+                <div>
+                    <span class="portal-card-badge">Academic Management</span>
+                    <h3>Student Dashboard</h3>
+                    <p>View your weekly lecture timetable, assignment submissions, course progression metrics, and announcements in one organized dashboard.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 2/Dashboard.html" class="btn btn-small">Open Dashboard</a>
+                    <a href="practical 2/profile.html" class="btn btn-small" style="background:#64748b;">Profile</a>
+                </div>
+            </div>
+
+            <!-- Campus Events Card -->
+            <div class="portal-card">
+                <div>
+                    <span class="portal-card-badge">Activities &amp; Competitions</span>
+                    <h3>Campus Events &amp; Hackathons</h3>
+                    <p>Register for hackathons, technical symposiums, robotics battles, and annual cultural festivals organized across the university.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 2/Event.html" class="btn btn-small">Event Registration</a>
+                    <a href="practical 6/index.html" class="btn btn-small" style="background:#1f4e79;">Explore JSON Events</a>
+                </div>
+            </div>
+
+            <!-- Student Profile & Directory -->
+            <div class="portal-card">
+                <div>
+                    <span class="portal-card-badge">Student Records</span>
+                    <h3>Profiles &amp; Directory</h3>
+                    <p>Manage your student credentials, enrollment details, academic records, and search fellow students across branches and semesters.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 2/profile.html" class="btn btn-small">My Profile</a>
+                    <a href="practical 6/index.html" class="btn btn-small" style="background:#1f4e79;">Student Directory</a>
+                </div>
+            </div>
+
+            <!-- Help & FAQ Section -->
+            <div class="portal-card">
+                <div>
+                    <span class="portal-card-badge">Student Support</span>
+                    <h3>FAQs &amp; Help Desk</h3>
+                    <p>Find instant answers regarding examination eligibility, attendance regulations, scholarships, campus Wi-Fi, and transport routes.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 2/FAQ.html" class="btn btn-small">View FAQs</a>
+                    <a href="practical 2/contact.html" class="btn btn-small" style="background:#64748b;">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Portal Information -->
+            <div class="portal-card">
+                <div>
+                    <span class="portal-card-badge">System Information</span>
+                    <h3>About Student Hub</h3>
+                    <p>Learn more about the architecture, technology stack (HTML5, CSS3, JavaScript ES6+, Fetch API, LocalStorage), and developer team.</p>
+                </div>
+                <div class="portal-links">
+                    <a href="practical 2/About.html" class="btn btn-small">About Portal</a>
+                    <a href="practical 2/feedback.html" class="btn btn-small" style="background:#64748b;">Give Feedback</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2026 Student Hub Portal | All Rights Reserved.</p>
+            <p>Developed by Student Hub Team • Connected Across All Practicals</p>
+        </div>
+    </footer>
+
+    <!-- Shared Script for Theme & Navigation -->
+    <script src="practical 4/script.js"></script>
+</body>
+
+</html>

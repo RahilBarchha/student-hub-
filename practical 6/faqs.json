@@ -1,0 +1,147 @@
+[
+  {
+    "id": "FAQ-001",
+    "category": "Admissions & Academics",
+    "question": "What is the minimum attendance required to appear in semester end examinations?",
+    "answer": "As per university academic regulations, students must maintain a minimum of 80% aggregate attendance in each registered theory course and 85% in laboratory practical courses to be eligible for end-semester examinations.",
+    "isImportant": true,
+    "views": 1420,
+    "lastUpdated": "2026-08-15",
+    "tags": ["Attendance", "Exams", "Regulations"]
+  },
+  {
+    "id": "FAQ-002",
+    "category": "Exams & Evaluation",
+    "question": "How is the Semester Grade Point Average (SGPA) and CGPA calculated?",
+    "answer": "SGPA is calculated by dividing the sum of credits multiplied by grade points earned in all courses by the total credits registered in that semester. CGPA is the cumulative credit-weighted average across all completed semesters.",
+    "isImportant": true,
+    "views": 2150,
+    "tags": ["SGPA", "CGPA", "Grades", "Credit System"]
+  },
+  {
+    "id": "FAQ-003",
+    "category": "Events & Activities",
+    "question": "Can I participate in multiple technical and cultural events concurrently?",
+    "answer": "Yes! Students may participate in multiple events as long as the event schedules do not conflict. For team-based hackathons, each student can register in only one participating team.",
+    "isImportant": false,
+    "views": 890,
+    "tags": ["Events", "Registration", "Hackathons"]
+  },
+  {
+    "id": "FAQ-004",
+    "category": "Campus Facilities",
+    "question": "What are the operating hours of the Central Digital Library and innovation labs?",
+    "answer": "The Central Digital Library is open from 8:00 AM to 10:00 PM on weekdays and 9:00 AM to 5:00 PM on weekends. The 24x7 Innovation FabLab is accessible via student RFID smart card authorization.",
+    "isImportant": false,
+    "views": 1120,
+    "tags": ["Library", "Lab", "Facilities", "Timing"]
+  },
+  {
+    "id": "FAQ-005",
+    "category": "Placements & Internships",
+    "question": "What is the criterion to register with the Training & Placement Cell (T&P)?",
+    "answer": "Students in their 6th semester with a minimum CGPA of 6.5 and no active backlogs are eligible for campus placement drives. Pre-placement training sessions and mock tests are mandatory.",
+    "isImportant": true,
+    "views": 3310,
+    "tags": ["Placements", "Internships", "Eligibility", "T&P"]
+  },
+  {
+    "id": "FAQ-006",
+    "category": "Admissions & Academics",
+    "question": "How do I apply for official transcripts and degree certificates?",
+    "answer": "Submit an online transcript application via the Student Hub Portal or academic office along with the fee receipt. Digital signed transcripts are dispatched within 5 working days.",
+    "isImportant": false,
+    "views": 750,
+    "tags": ["Transcripts", "Certificate", "Documents"]
+  },
+  {
+    "id": "FAQ-007",
+    "category": "Financial & Scholarships",
+    "question": "What scholarship schemes are available for meritorious and reserved category students?",
+    "answer": "University provides Merit Scholarships (up to 100% tuition waiver for top 3 rankers), MYSY scheme, Post-Matric government scholarships, and international student fellowship programs.",
+    "isImportant": true,
+    "views": 2890,
+    "tags": ["Scholarship", "Financial Aid", "MYSY", "Tuition"]
+  },
+  {
+    "id": "FAQ-008",
+    "category": "IT Services & Portal",
+    "question": "How do I reset my Student Hub Portal and campus Wi-Fi credentials?",
+    "answer": "Visit the IT Helpdesk self-service portal, click 'Forgot Password', and enter your university enrollment ID. An OTP will be dispatched to your registered institutional email address.",
+    "isImportant": false,
+    "views": 1640,
+    "tags": ["Password", "Wi-Fi", "IT Support", "Login"]
+  },
+  {
+    "id": "FAQ-009",
+    "category": "Hostel & Transport",
+    "question": "How can I book or change my campus bus transit route?",
+    "answer": "Bus pass applications and route change requests are accepted at the beginning of each semester through the Transport Section dashboard in the Student Portal.",
+    "isImportant": false,
+    "views": 940,
+    "tags": ["Transport", "Bus", "Hostel", "Commute"]
+  },
+  {
+    "id": "FAQ-010",
+    "category": "Exams & Evaluation",
+    "question": "What is the procedure for paper rechecking or verification of marks?",
+    "answer": "Students can apply for answer book viewing and reassessment within 7 days of result declaration by paying the nominal scrutiny fee of INR 300 per subject.",
+    "isImportant": true,
+    "views": 1980,
+    "tags": ["Rechecking", "Reassessment", "Results"]
+  },
+  {
+    "id": "FAQ-011",
+    "category": "Campus Facilities",
+    "question": "Are healthcare and medical consultation facilities available on campus?",
+    "answer": "Yes, a 24/7 University Health Centre with a resident medical officer, nursing staff, ambulance service, and essential pharmacy is situated near the sports complex.",
+    "isImportant": false,
+    "views": 620,
+    "tags": ["Health", "Medical", "Emergency", "Doctor"]
+  },
+  {
+    "id": "FAQ-012",
+    "category": "Admissions & Academics",
+    "question": "Can undergraduate students choose interdisciplinary open elective courses?",
+    "answer": "Yes, beginning from semester 5, students can choose open electives from other disciplines including AI for Everyone, Financial Literacy, Psychology, and Renewable Energy.",
+    "isImportant": false,
+    "views": 840,
+    "tags": ["Electives", "Curriculum", "Choice Based Credit System"]
+  },
+  {
+    "id": "FAQ-013",
+    "category": "Events & Activities",
+    "question": "How can student clubs get university funding for technical symposiums?",
+    "answer": "Registered student club coordinators must submit a detailed proposal, budget estimate, and faculty advisor endorsement to the Dean of Student Affairs at least 30 days prior.",
+    "isImportant": false,
+    "views": 570,
+    "tags": ["Clubs", "Funding", "Budget", "Symposium"]
+  },
+  {
+    "id": "FAQ-014",
+    "category": "Placements & Internships",
+    "question": "Is an industrial summer internship mandatory for degree completion?",
+    "answer": "Yes, all B.Tech students are required to undergo a 6-8 week industrial internship during the summer recess following their 6th semester and submit a viva project report.",
+    "isImportant": true,
+    "views": 2410,
+    "tags": ["Internship", "Industry", "Degree", "Project"]
+  },
+  {
+    "id": "FAQ-015",
+    "category": "IT Services & Portal",
+    "question": "How does offline data access work on the Student Hub Portal?",
+    "answer": "The Student Hub Portal utilizes the HTML5 localStorage Cache API to automatically snapshot the latest JSON responses. If your internet disconnects, all previously loaded events, student cards, and FAQs remain instantly accessible offline.",
+    "isImportant": true,
+    "views": 1780,
+    "tags": ["Offline", "Cache", "Fetch API", "Local Storage"]
+  },
+  {
+    "id": "FAQ-016",
+    "category": "Campus Facilities",
+    "question": "What are the rules regarding sports equipment lending from the gymnasium?",
+    "answer": "Students can borrow badminton racquets, cricket gear, and footballs by depositing their university physical ID card at the sports equipment counter for up to 2 hours per day.",
+    "isImportant": false,
+    "views": 510,
+    "tags": ["Sports", "Gym", "Equipment", "Recreation"]
+  }
+]
