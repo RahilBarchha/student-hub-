@@ -1,0 +1,20 @@
+Hosts file location: C:\Windows\System32\drivers\etc\hosts
+Hosts entry:
+127.0.0.1 studenthub.local
+127.0.0.1 www.studenthub.local
+
+Apache vhosts configuration location: C:\xampp\apache\conf\extra\httpd-vhosts.conf
+Apache vhosts configuration block:
+<VirtualHost *:80>
+    ServerAdmin barchharahil720@gmail.com
+    DocumentRoot "C:/xampp/htdocs/practical 7/student hub portal/practical 15"
+    ServerName studenthub.local
+    ServerAlias www.studenthub.local
+    <Directory "C:/xampp/htdocs/practical 7/student hub portal/practical 15">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog "logs/studenthub-error.log"
+    CustomLog "logs/studenthub-access.log" common
+</VirtualHost>
